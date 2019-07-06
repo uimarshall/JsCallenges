@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Longest Word</h1>
+
+	<script>
+		function longestWord(str) {
+			let splitStr = str.split(" ")
+			let longestWordLen = 0;
+			let actualWord;
+			for (let i = 0; i < splitStr.length; i++) {
+				if (splitStr[i].length > longestWordLen) {
+					longestWordLen = splitStr[i]
+					actualWord = splitStr[i]
+				}
+			}
+			
+			return actualWord;
+		}
+		console.log(longestWord("sweetest name on server"));
+	</script>
+</body>
+</html>

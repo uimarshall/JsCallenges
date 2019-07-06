@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Check for primes</h1>
+
+	<script>
+		function isPrime(n) {
+			var divisor = 2;
+			while(n > divisor){
+				if (n % divisor === 0) {
+					return false
+				}
+				else
+					divisor++
+				
+			}
+			return true;
+		}
+		console.log(isPrime(15));
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Check for prime factors</h1>
+
+	<script>
+		function primeFactors(n) {
+			var factors = [];
+			baseDivisor = 2;
+			while(n > 2){
+				if (n % baseDivisor === 0) {
+					factors.push(baseDivisor);
+					n = n / baseDivisor;
+				}else{
+					baseDivisor++;
+
+				}
+			}
+			return factors;
+		}
+		console.log(primeFactors(14));
+	</script>
+</body>
+</html>
