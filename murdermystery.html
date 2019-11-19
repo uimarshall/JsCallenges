@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Murder Mystery</title>
+	</head>
+	<body>
+		<script>
+			let room = "dining room";
+			let suspect = "Mr. Parkes";
+
+			let weapon = "";
+			let solved = false;
+
+			if (room === "dining room") {
+				weapon = "knife";
+				solved = true;
+			} else if (room === "gallery") {
+				weapon = "trophy";
+				solved = true;
+			} else if (room === "billiards room") {
+				weapon = "pool stick";
+				solved = true;
+			} else {
+				weapon = "poison";
+				solved = true;
+			}
+
+			if (solved) {
+				console.log(
+					suspect + " did it in the " + room + " with the " + weapon + "!"
+				);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+	<form id="insert-form">
+		<input type="text">
+		<button>Insert</button>
+		
+	</form>
+	<div id="item-list">
+		<ul ></ul>
+	</div>
+	
+	
+
+	<script>
+		const list = document.querySelector("#item-list");
+		const insertForm = document.forms['insert-form'];
+		insertForm.addEventListener('submit',function(e){
+			e.preventDefault();
+			const value = insertForm.querySelector('input[type="text"]').value;
+			const li = document.createElement('li');
+			const itemName= document.createElement('span');
+
+			itemName.textContent=value;
+			li.append(itemName);
+			list.append(li);
+		})
+	</script>
+</body>
+</html>
